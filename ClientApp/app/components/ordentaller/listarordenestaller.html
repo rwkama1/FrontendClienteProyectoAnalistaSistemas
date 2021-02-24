@@ -1,0 +1,57 @@
+
+<div class='row'>
+            <form ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <h3 class="panel-title"> Ordenes de Taller</h3>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input class="form-control" type="search" id="buscar" size="30" placeholder="Buscar Orden de Taller..." width="50"  />
+                            </div>
+                        </div>
+                        <table class='table table-striped' *ngIf="ordenList">
+                         
+
+                            <thead>
+                                <tr>
+                                    <th> ID de Orden de Taller</th>
+                                    <th> ID del Producto</th>
+                                    <th> Fecha de la Orden</th>
+                                    <th> Cedula del Cliente</th>
+                                    <th> Estado</th>     
+                                    <th> Cedula del Tecnico  </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let ord of ordenList;">
+                                    <td>{{ ord.IdOT }}</td>
+                                    <td>{{ ord.ProductoOT }}</td>
+                                    <td>{{ ord.FechaOT }}</td>
+                                    <td>{{ ord.ClienteOT }}</td>
+                                    <td>{{ ord.EstadoOT }}</td>
+                                    <td>{{ ord.TecnicoOT }}</td>
+                                    <td>
+                                        <a [routerLink]="" (click)="seleccionarOrdenTaller(ord.IdOT)">
+                                            Ver Orden de Taller
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+

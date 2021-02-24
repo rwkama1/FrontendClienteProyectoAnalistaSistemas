@@ -1,0 +1,102 @@
+﻿
+    <div class='row'>
+            <form [formGroup]="verot" #fo="ngForm" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Orden Taller Agregada</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">ID del Producto </label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="idproducto" type="text" id="idproducto" readonly />
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Cedula del Tecnico</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="cedulatecnico" type="text" id="cedulatecnico" pattern="^[0-9-]+$" readonly required
+                                       title="Solo números">
+                                <span class="validity"></span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Declaracion del Cliente</label>
+
+                            <div class="col-md-4">
+                                <textarea class="form-control" formControlName="declaracioncliente" type="text" id="declcliente" readonly></textarea>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Cedula del Cliente</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="cedulacliente" type="text" id="cedulacliente" pattern="^[0-9-]+$" readonly required
+                                       title="Solo números">
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Fecha de Orden de Taller</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="fechaorden" type="text" id="fechaorden" readonly />
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Estado de Orden de Taller</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="estadoorden" type="text" id="estadoorden" readonly />
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Precio de Orden de Taller</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="precioot" type="text" id="precioot" readonly />
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Comentario</label>
+
+                            <div class="col-md-4">
+                                <textarea class="form-control" formControlName="comentario" type="text" id="comentario" readonly>
+                                </textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                          
+                            <button type="submit" class="btn btn-primary" (click)="volver()">Volver</button>
+                        </div>
+                       
+                    </div>
+                </div>
+            </form>
+        </div>

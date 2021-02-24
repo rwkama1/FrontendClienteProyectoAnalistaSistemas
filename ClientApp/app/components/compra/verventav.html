@@ -1,0 +1,121 @@
+﻿
+
+<form [formGroup]="vercompra" #fo="ngForm" novalidate>
+    
+    <div class="panel panel-primary" id="print">
+
+        <div class="panel-heading">
+            <h3 class="panel-title">Informacion de la Venta</h3>
+        </div>
+        <div class="panel-body">
+
+
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="lfecha">Fecha de Venta</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingfecha" type="datetime" id="ingfecha" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="ingmetodo">Metodo de Pago</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingmetodo" type="text" id="ingmetodo" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="ingcedula">Cedula del Cliente</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingcedula" type="text" id="ingcedula" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="ingestado">Estado de la Venta</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingestado" type="text" id="ingestado" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="lfecha">Impuestos</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingimp" type="text" id="ingimp" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="lfecha">Subtotal</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingsubtotal" type="text" id="ingsubtotal" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label class=" control-label col-md-12" for="lfecha">Total</label>
+
+                <div class="col-md-4">
+                    <input class="form-control" formControlName="ingtotal" type="text" id="ingtotal" readonly>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <table class='table' *ngIf="fc">
+                    <thead>
+                        <tr>
+
+                            <th>ID del Producto</th>
+                            <th>Cantidad </th>
+                            <th>Importe </th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let lfc of fc.LineaVenta;">
+
+                            <td>{{ lfc.ProductoLV }}</td>
+                            <td>{{ lfc.CantidadLV }}</td>
+                            <td>${{ lfc.ImporteLV }}</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
+
+
+
+
+
+

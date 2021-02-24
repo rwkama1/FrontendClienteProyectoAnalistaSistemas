@@ -1,0 +1,56 @@
+
+    <div class="row">
+        <div class='col-sm-3'>
+            <navmenu2></navmenu2>
+        </div>
+        <form ngNativeValidate>
+            <div class="panel panel-primary" id="content">
+                <div class="panel-heading">
+                    <div class="form-group">
+                        <h3 class="panel-title"> Productos</h3>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input class="form-control" type="search" id="buscar" size="30" placeholder="Buscar Producto..." width="50" on-keypress="buscarProducto()" />
+                        </div>
+                    </div>
+                    <table class='table table-striped' *ngIf="prodList">
+                        <thead>
+                            <tr>
+                                <th> ID</th>
+                                <th> Nombre</th>
+                                <th> Descripcion</th>
+                                <th> Precio</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let prod of prodList;">
+                                <td>{{ prod.IdProducto }}</td>
+                                <td>{{ prod.NomProd }}</td>
+                                <td>{{ prod.DescProd }}</td>
+                                <td>${{ prod.PrecioProd }}</td>
+
+                                <td>
+                                    <a [routerLink]="" (click)="seleccionarProduct(prod.IdProducto)">
+                                        Ver Producto
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+
+
+

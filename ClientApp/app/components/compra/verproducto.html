@@ -1,0 +1,64 @@
+﻿
+    <div class="row">
+            <form [formGroup]="verpForm" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ver Producto</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="IdProducto">ID del Producto</label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" formControlName="IdProducto" id="IdProducto" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="NomProd">Nombre del Producto</label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" formControlName="NomProd" id="NomProd" readonly>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="DescProd">Descripcion</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" type="text" formControlName="DescProd" id="DescProd" readonly></textarea>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="PrecioProd">Precio </label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" formControlName="PrecioProd" id="PrecioProd" readonly pattern="0.00">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="CatProd">Categoria</label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" formControlName="CatProd" id="CatProd" readonly>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="Stock">Stock</label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" formControlName="StockProd" id="StockProd" readonly>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                            <button type="submit" (click)="registrarProducto()" class="btn btn-primary">Registar Producto en Compra</button>
+                          
+                        </div>     
+                      
+                    </div>
+                </div>
+
+            </form>
+        </div>
+

@@ -1,0 +1,32 @@
+﻿<div class="container">
+    <div class="row">
+       
+        <div class='col-sm-9 body-content'>
+            <form (ngSubmit)="enviarMensaje()" ngNativeValidate >
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Enviar Mensaje</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <label class=" control-label col-md-12" for="ComentarioMens">Comentario</label>
+                            <div class="col-md-4">
+                                <textarea  type="text" class="form-control" id="ComentarioMens" required></textarea>
+                            </div>
+                        </div>
+                     
+                     
+
+                    </div>
+                    <div class="panel-footer">
+
+                        <button type="submit" class="btn btn-primary" >Enviar Mensaje</button>
+                       
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

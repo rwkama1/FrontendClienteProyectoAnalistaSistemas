@@ -1,0 +1,41 @@
+﻿
+<div class="container">
+    <div class='col-sm-9 body-content'>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Listado de Mensajes</h3>
+            </div>
+            <div class="panel-body">
+
+
+                <table class='table table-striped' *ngIf="msjList">
+                    <thead>
+                        <tr>
+                            <th>Id Mensaje</th>
+                            <th>Comentario</th>
+                            <th>Cliente </th>
+                            <th>Fecha de envío </th>
+                            <th>Fecha de respuesta </th>
+                            <th>Respuesta </th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let msj of msjList;">
+                            <td>{{ msj.IdMensaje }}</td>
+                            <td>{{ msj.ComentarioMens }}</td>
+                            <td>{{ msj.Clicom }}</td>
+                            <td>{{ msj.Fechaenvio }}</td>
+                            <td>{{ msj.Fecharespuesta }}</td>
+                            <td>{{ msj.RespuestaMens }}</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

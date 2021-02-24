@@ -1,0 +1,44 @@
+﻿
+<div class="container">
+    <div class='col-sm-9 body-content'>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Listado de Ventas</h3>
+            </div>
+            <div class="panel-body">
+                <table class='table table-striped' *ngIf="compraslist">
+                    <thead>
+                        <tr>
+                            <th>ID de Venta</th>
+                            <th>Fecha de la Venta</th>
+                            <th>Metodo de Pago</th>
+                            <th>Cedula</th>
+                            <th>Total</th>
+                            <th>Estado de la Venta </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let c of compraslist;">
+                            <td>{{ c.IdV }}</td>
+                            <td>{{ c.FechaV }}</td>
+                            <td>{{ c.MetodoPagoV }}</td>
+                            <td>{{ c.ClienteV }}</td>
+                            <td>${{ c.TotalV }}</td>
+                            <td>{{ c.EstadoV }}</td>
+                            <td>
+                                <a [routerLink]="" (click)="seleccionarV(c.IdV)">
+                                    Ver Venta
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

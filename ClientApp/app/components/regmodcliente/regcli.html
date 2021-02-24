@@ -1,0 +1,60 @@
+﻿<!--<div class="row">-->
+<div class='container-fluid'>
+    <div class='col-sm-3'>
+        <navmenu2></navmenu2>
+    </div>
+    <div style="width: 700px;">
+        <form (ngSubmit)="registrarCliente()" ngNativeValidate>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Registro Cliente</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <label class=" control-label col-md-12" for="cedula">Cedula</label>
+                        <div class="col-md-4">
+                            <input class="form-control" type="number" id="cedula" min="10000000" max="99999999" required>
+                            <span class="validity"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class=" control-label col-md-12" for="name">Nombre</label>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" id="nombre" required>
+
+                        </div>
+                    </div>
+                    <div>
+                        <label class=" control-label col-md-12" for="direccion">Direccion</label>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" id="direccion" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class=" control-label col-md-12" for="telefono">Telefono</label>
+                        <div class="col-md-4">
+                            <input class="form-control" type="number" id="telefono" min="10000" max="99999999999">
+                            <span class="validity"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class=" control-label col-md-12" for="contraseña">Contraseña</label>
+                        <div class="col-md-4">
+                            <input class="form-control" type="password" id="pass" required>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="panel-footer">
+
+                    <button type="submit" class="btn btn-primary">Registrar Cliente</button>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+    <!--</div>-->

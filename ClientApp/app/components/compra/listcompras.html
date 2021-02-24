@@ -1,0 +1,57 @@
+﻿
+<div class="container">
+    <div class='col-sm-9 body-content'>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Listado de Compras</h3>
+            </div>
+            <div class="panel-body">
+
+                <div>
+                    <label class=" control-label col-md-12" for="fechas">Elegir fechas:</label>
+                    <div class="col-md-4">
+                        <input class="form-control" type="date" id="fecha1" required>
+                        <span class="validity"></span>
+                    </div>
+                </div>
+                <div>
+                   
+                    <div class="col-md-4">
+                        <input class="form-control" type="date" id="fecha2" required>
+                        <span class="validity"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary" (click)="buscarCompra()">Buscar</button>
+                    </div>
+                </div>
+                <table class='table table-striped' *ngIf="compraslist">
+                    <thead>
+                        <tr>
+                            <th>Fecha de la Compra</th>
+                            <th>Metodo de Pago</th>
+                            <th>Cedula</th>
+                            <th>Total</th>
+                            <th>Estado de la Compra </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let c of compraslist;">
+                            <td>{{ c.FechaC }}</td>
+                            <td>{{ c.MetodoPagoC }}</td>
+                            <td>{{ c.ClienteC }}</td>
+                            <td>${{ c.TotalC }}</td>
+                            <td>{{ c.EstadoC }}</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,59 @@
+﻿<style>
+    input:invalid + span:after {
+        content: '✖';
+        padding-left: 5px;
+    }
+
+    input:valid + span:after {
+        content: '✓';
+        padding-left: 5px;
+    }
+</style>
+
+    <div class="row">
+       
+       
+            <form [formGroup]="prodForm" (ngSubmit)="registrarProd()" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Registrar producto en solicitud compra</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <div class="col-md-4">
+
+                                <input class="form-control" type="text" id="idprod" readonly formControlName="idprod" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+
+                                <input class="form-control" type="text" id="nomprod" readonly formControlName="nomprod" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <input class="form-control" type="number" id="ingcantidad" placeholder="Cantidad..." required
+                                     min="1"  >
+                                <span class="validity"></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Registrar Producto</button>
+                            <button type="button" class="btn btn-primary" (click)="volver()">Volver a elegir producto</button>
+                           
+                        </div>
+                        
+                           
+                     
+                    </div>
+                </div>
+
+            </form>
+        </div>
+   
+
